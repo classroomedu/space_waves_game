@@ -30,7 +30,8 @@ export default function HowToPlay() {
               <p className="text-sm font-bold sm:text-xl">2</p>
             </div>
             <p className="text-sm sm:text-base">
-              Choosing a "green" level provides wider spaces and angles, allowing you to build up some straight momentum. As the difficulty increases, you'll encounter more obstacles, tighter angles, and a greater challenge.
+              Choosing a &ldquo;green&rdquo; level provides wider spaces and angles, allowing you to build up some straight momentum.
+              As the difficulty increases, you'll encounter more obstacles, tighter angles, and a greater challenge.
             </p>
           </div>
           {/* Item */}
