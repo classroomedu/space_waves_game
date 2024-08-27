@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Space Waves is an arcade game where you guide an arrow through challenging levels filled with obstacles, testing your precision and reaction time.
+
+The Game Website Link: https://spacewaves.com
 
 ## Getting Started
 
