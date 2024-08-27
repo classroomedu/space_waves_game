@@ -1,29 +1,6 @@
 
 import React, { useState } from 'react';
-
-// FAQs array
-const faqs = [
-  {
-    question: "How many levels are there in Space Waves?",
-    answer: "Space Waves features a total of 33 levels, each with its own set of obstacles and difficulty.",
-  },
-  {
-    question: "Can I choose the level I want to play?",
-    answer: "Yes, Space Waves allows you to select any level you wish to play, including the most challenging ones right from the start.",
-  },
-  {
-    question: "What types of obstacles will I encounter in the game?",
-    answer: "Players will face various obstacles including walls, rotating cogs, and thorns throughout the levels.",
-  },
-  {
-    question: "How does the difficulty increase in Space Waves?",
-    answer: "Difficulty increases with each level, featuring tighter angles and more obstacles. \"Green\" levels offer wider spaces and angles, making them easier compared to higher difficulty levels.",
-  },
-  {
-    question: "What is the main goal of each level?",
-    answer: "The objective of each level is to navigate your arrow to the end without crashing into any obstacles.",
-  }
-];
+import messages from '../../messages';
 
 export default function FAQ() {
   // State to manage which FAQ is currently open
@@ -40,14 +17,14 @@ export default function FAQ() {
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
           <h2 className="text-3xl lg:text-5xl font-bold text-black">
-            Frequently Asked Questions
+            {messages.faq.title}
           </h2>
           <p className="font-inter mt-4 max-w-xl px-5 text-base font-light text-gray-500 lg:max-w-lg">
-            About Space Waves
+            {messages.faq.subTitle}
           </p>
         </div>
         <div className="mt-10 flex w-full flex-col">
-          {faqs.map((faq, index) => (
+          {messages.faq.items.map((faq, index) => (
             <>
               <div
                 key={index}
