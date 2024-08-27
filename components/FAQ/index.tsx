@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import messages from '../../messages';
+import { useTranslations } from 'next-intl';
 
 export default function FAQ() {
+  const t = useTranslations('faq');
   // State to manage which FAQ is currently open
   const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -17,14 +18,14 @@ export default function FAQ() {
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
           <h2 className="text-3xl lg:text-5xl font-bold text-black">
-            {messages.faq.title}
+            {t('title')}
           </h2>
           <p className="font-inter mt-4 max-w-xl px-5 text-base font-light text-gray-500 lg:max-w-lg">
-            {messages.faq.subTitle}
+            {t('subTitle')}
           </p>
         </div>
         <div className="mt-10 flex w-full flex-col">
-          {messages.faq.items.map((faq, index) => (
+          {t.raw('items').map((faq: any, index: number) => (
             <>
               <div
                 key={index}
