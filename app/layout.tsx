@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import messages from "@/messages";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Space Waves",
-  description: "Space Waves is an arcade game where you guide an arrow through challenging levels filled with obstacles, testing your precision and reaction time.",
+  title: messages.meta.title,
+  description: messages.meta.description,
 };
 
 export default function RootLayout({

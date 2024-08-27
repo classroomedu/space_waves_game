@@ -1,6 +1,7 @@
 export default {
   meta: {
-
+    title: 'Space Waves',
+    description: 'Space Waves is an arcade game where you guide an arrow through challenging levels filled with obstacles, testing your precision and reaction time.',
   },
 
   hero: {
