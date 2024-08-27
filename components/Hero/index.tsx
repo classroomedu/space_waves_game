@@ -1,7 +1,9 @@
 import React from 'react';
-import messages from '../../messages';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <header>
       {/* Hero Container */}
@@ -12,10 +14,10 @@ export default function Hero() {
           <div className="flex flex-col">
             {/* Hero Title */}
             <h1 className="mb-4 text-4xl font-bold md:text-6xl">
-              {messages.hero.title}
+              {t('title')}
             </h1>
             <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-10 lg:mb-12">
-              {messages.hero.subTitle}
+              {t('subTitle')}
             </p>
             {/* Hero Button */}
             <div className="flex items-center">
@@ -23,7 +25,7 @@ export default function Hero() {
                 href="https://www.crazygames.com/game/space-waves"
                 className="mr-5 items-center rounded-md bg-black px-6 py-3 font-semibold text-white md:mr-6 lg:mr-8"
                 target="_blank"
-              >{messages.hero.startBtnText}</a>
+              >{t('startBtnText')}</a>
             </div>
           </div>
           {/* Hero Image */}
