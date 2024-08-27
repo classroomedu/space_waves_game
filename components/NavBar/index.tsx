@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import LocaleSwitcher from '../LocaleSwitcher';
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +32,13 @@ export default function NavBar() {
           <div
             className={`flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 ${isOpen ? "" : "hidden"}`}
           >
-            <a
+            <LocaleSwitcher />
+            {/* <a
               className="font-inter rounded-lg bg-black px-8 py-4 text-center text-white hover:bg-gray-800"
               href="#"
             >
               Login
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>
