@@ -19,7 +19,7 @@ export default function HowToPlay() {
           {/* Item */}
           {
             messages.howToPlay.items.map((item, index) => (
-              <div className="flex items-center justify-center rounded-sm bg-gray-100 px-6 py-4">
+              <div key={index} className="flex items-center justify-center rounded-sm bg-gray-100 px-6 py-4">
                 <div className="mr-6 flex h-14 w-14 flex-none items-center justify-center rounded-sm bg-white">
                   <p className="text-sm font-bold sm:text-xl">1</p>
                 </div>
