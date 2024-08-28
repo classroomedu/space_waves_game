@@ -7,10 +7,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata({params: { locale }}: any) {
   const t = await getTranslations({ locale, namespace: 'meta' });
+  const canonical = ['', 'en'].includes(locale)
+    ? process.env.NEXT_PUBLIC_SITE_URL 
+    : process.env.NEXT_PUBLIC_SITE_URL + locale + '/' 
  
   return {
     title: t('title'),
     description: t('description'),
+    alternates: { canonical, },
   };
 }
 
