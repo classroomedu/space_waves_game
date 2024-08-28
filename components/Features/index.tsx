@@ -1,22 +1,24 @@
 import React from 'react';
-import messages from '../../messages';
+import { useTranslations } from 'next-intl';
 
 export default function Features() {
+  const t = useTranslations('features');
+
   return (
     <section>
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Title */}
         <h2 className="items-center text-center text-3xl font-bold md:text-5xl">
-          {messages.features.title}
+          {t('title')}
         </h2>
         <p className="mx-auto mb-8 mt-4 max-w-lg text-center text-sm text-gray-500 sm:text-base md:mb-12">
-          {messages.features.subTitle}
+          {t('subTitle')}
         </p>
         {/* List */}
         <ul className="grid gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-0">
           {
-            messages.features.items.map(config => {
+            t.raw('items').map((config: any) => {
               return (
                 <li key={config.title} className="flex flex-col items-center gap-6 md:border-r md:px-10 md:py-4 p-8 md:border-gray-300">
                   <img

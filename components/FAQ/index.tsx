@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import messages from '../../messages';
+import { useTranslations } from 'next-intl';
 
 export default function FAQ() {
+  const t = useTranslations('faq');
   // State to manage which FAQ is currently open
   const [openFAQ, setOpenFAQ] = useState(null);
 
@@ -17,19 +18,16 @@ export default function FAQ() {
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center px-6 text-center lg:max-w-3xl lg:px-10">
           <h2 className="text-3xl lg:text-5xl font-bold text-black">
-            {messages.faq.title}
+            {t('title')}
           </h2>
           <p className="font-inter mt-4 max-w-xl px-5 text-base font-light text-gray-500 lg:max-w-lg">
-            {messages.faq.subTitle}
+            {t('subTitle')}
           </p>
         </div>
         <div className="mt-10 flex w-full flex-col">
-          {messages.faq.items.map((faq, index) => (
-            <>
-              <div
-                key={index}
-                className="relative my-3 w-full rounded-md px-12 py-8"
-              >
+          {t.raw('items').map((faq: any, index: number) => (
+            <div key={index}>
+              <div className="relative my-3 w-full rounded-md px-12 py-8">
                 <div className="max-w-2xl">
                   <h2
                     className="text-xl font-bold text-black"
@@ -58,24 +56,24 @@ export default function FAQ() {
                     <path
                       d="M7.04688 11.9999H16.9469"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     {openFAQ !== index && (
                       <path
                         d="M12 7.05005V16.95"
                         stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       ></path>
                     )}
                   </svg>
                 </button>
               </div>
               <div className="mr-4 ml-8 border border-gray-200"></div>
-            </>
+            </div>
           ))}
         </div>
         {/* <p className="font-inter mx-auto mt-12 text-center text-base text-gray-500">
