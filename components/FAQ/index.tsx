@@ -26,11 +26,8 @@ export default function FAQ() {
         </div>
         <div className="mt-10 flex w-full flex-col">
           {t.raw('items').map((faq: any, index: number) => (
-            <>
-              <div
-                key={index}
-                className="relative my-3 w-full rounded-md px-12 py-8"
-              >
+            <div key={index}>
+              <div className="relative my-3 w-full rounded-md px-12 py-8">
                 <div className="max-w-2xl">
                   <h2
                     className="text-xl font-bold text-black"
@@ -59,24 +56,24 @@ export default function FAQ() {
                     <path
                       d="M7.04688 11.9999H16.9469"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     {openFAQ !== index && (
                       <path
                         d="M12 7.05005V16.95"
                         stroke="black"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       ></path>
                     )}
                   </svg>
                 </button>
               </div>
               <div className="mr-4 ml-8 border border-gray-200"></div>
-            </>
+            </div>
           ))}
         </div>
         {/* <p className="font-inter mx-auto mt-12 text-center text-base text-gray-500">
